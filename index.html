@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Aniversário, Natasha!</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    .circle {
+      width: 24px;
+      height: 24px;
+      background: #ffb6c1;
+      display: inline-block;
+      margin: 0 2px;
+      clip-path: polygon(
+        10% 20%, 20% 10%, 40% 0%, 60% 10%, 80% 20%, 90% 40%, 
+        100% 60%, 90% 80%, 80% 90%, 60% 100%, 40% 90%, 20% 80%, 0% 60%, 10% 40%
+      );
+      border: 2px solid #fff;
+      transition: background 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="theme-toggle">
+    <label>
+      <input id="darkToggle" type="checkbox" />
+      🌙 Modo Escuro
+    </label>
+  </div>
+
+  <div class="header">🎉 Feliz Aniversário minha flor 🎂</div>
+  <p class="header">toque na foto</p>
+  <img src="Natasha.png" alt="Natasha" class="profile-image" />
+
+  <div class="container">
+
+    <a class="button festa-cores" href="mensagem_para_você.html">
+      🎈 Cores da Festa
+      <div class="circle-colors">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="circle c3"></div>
+      </div>
+    </a>
+
+    <a class="button lockscreen-preview" href="senha.html">
+      🎁 Surpresa
+      <div class="time"> <br/>🔒</div>
+      <div class="icon">🎂🎉</div>
+    </a>
+
+    <a class="button" href="Fotos.html">📷 Fotos</a>
+
+    <a class="button" href="Bolo.html">🎂 Bolo</a>    
+  
+    <a class="button wide" href="Cartinha.html">📜 Cartinha</a>
+
+    <a class="button wide" href="Festa.html">🎉 Festa</a>
+
+  </div>
+
+  <audio id="bg-music" src="musica de fundo.mp3" autoplay loop></audio>
+
+  <script>
+  window.addEventListener('DOMContentLoaded', function() {
+  const audio = document.getElementById('bg-music');
+  function playAudio() {
+    audio.play();
+    document.removeEventListener('click', playAudio);
+    document.removeEventListener('touchstart', playAudio);
+  }
+  document.addEventListener('click', playAudio);
+  document.addEventListener('touchstart', playAudio);
+});
+  </script>
+
+</body>
+</html>
+
+
+
+
